@@ -32,10 +32,13 @@ subprocess.call('echo Hello $USER', shell=True)
 print("\nSearching for 'hello world'", flush=True)
 subprocess.call('grep -i \'hello world\' hello_world.py', shell=True)
 
-"""subprocess.call doesn't expand shell wildcards or perform command substitution, etc.,
+"""
+*Quotes need to be escaped if they clash between command string and quotes within the command itself.
+*Or avoid escaping quotes by using single/double quotes alternating.
+*subprocess.call doesn't expand shell wildcards or perform command substitution, etc.,
 To override this, shell=True
-Entire command now passed as a string, not list of strs.
-shell=True only when you're sure of the command, else security RISK!
+*Entire command now passed as a string, not list of strs.
+*shell=True only when you're sure of the command, else security RISK!
 https://stackoverflow.com/questions/3172470/actual-meaning-of-shell-true-in-subprocess
 *Executing shell commands that incorporate unsanitized input from an untrusted source makes a program vulnerable to shell injection, a serious security flaw which can result in arbitrary command execution. For this reason, the use of shell=True is strongly discouraged in cases where the command string is constructed from external input.*
 """
