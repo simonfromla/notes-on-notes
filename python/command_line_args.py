@@ -49,7 +49,7 @@
 # """
 # Using filename in code
 
-# If re.searched filename exists, uses shell commands to print out num lines/words
+# If re.searched filename exists, uses shell commands, through subprocess, to print out num lines/words
 # """
 
 # if len(sys.argv) != 2:
