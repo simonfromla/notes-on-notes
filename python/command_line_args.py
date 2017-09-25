@@ -78,6 +78,7 @@
 # Handling CLI switches with argparse module
 
 # Takes a file and sorts the newlines alphbetically
+    # -f specified as required
 # """
 
 # parser = argparse.ArgumentParser()
