@@ -1,4 +1,4 @@
-# Shell Scripting
+# Executing Shell Scripts
 1. Write the script
 2. Give the shell permission to execute
 3. Put it somewhere the shell can find it 
@@ -11,7 +11,8 @@ Text editor examples: vi, vim / Emacs / nano
 
 ```
 #!/bin/bash
-\# My first script
+#Loop over the files with names containing space. 
+#Use `${VARIABLE//PATTERN/REPLACEMENT}` construct to replace
 
 for x in *" "*; do
   mv -- "$x" "${x// /_}"
