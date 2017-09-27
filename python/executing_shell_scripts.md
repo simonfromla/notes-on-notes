@@ -20,9 +20,9 @@ done
 ```
 
 ### Setting permission
-`chmod 700 filename`
-700 will give private(only you) read and write execute permissions
-755 - read, write, execute to everybody
+`chmod 700 filename`  
+`700` will give private(only you) read and write execute permissions  
+`755` - read, write, execute to everybody  
 
 ### Setting path
 If in directory of saved script, running `./filename` should run. Else, add directory to your $PATH.
