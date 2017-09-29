@@ -1,6 +1,7 @@
 # String methods
 
 ### translate string characters
+
 1. `str.maketrans()` to create a translation table
 2. `translate()` to perform the string mapping based on translation table
     * `maketrans(x,y,z)` `x` - string character to replace, `y` - char for replacement `z` - char to be mapped to `None`  
@@ -27,19 +28,26 @@
 ' Have a slice of cake '
 ```
 
+### .strip()
+* Removing leading and/or trailing chars
+* Only consecutive chars from start/end removed
+* Whitespace chara stripped by default/nothing specified
+* Chars argument is not a prefix or suffix; rather, all combinations of its values are stripped
+
 ```python
->>> greeting = '      Have a nice day :)     '
->>> greeting.strip()
-'Have a nice day :)'
->>> greeting.rstrip()
-'      Have a nice day :)'
->>> greeting.lstrip()
-'Have a nice day :)     '
+>>> s = '      Have a cake :)     '
+>>> s.strip()
+'Have a cake :)'
+>>> s.rstrip()
+'      Have a cake :)'
+>>> s.lstrip()
+'Have a cake :)     '
 
->>> greeting.strip(') :')
-'Have a nice day'
+>>> s.strip(') :')
+'Have a cake'
 
->>> greeting = '===== Have a great day!! ====='
->>> greeting.strip('=')
-' Have a great day!! '
+>>> s = '===== Have a great day! ====='
+>>> greeting.strip('=y')
+' Have a great da! '
 ```
+
