@@ -204,3 +204,65 @@ If sep is given, consecutive delimiters are not grouped together and are deemed 
 'This :: is :: not :: a :: string :: list'
 ```
 
+##### Replace chars
+`str.replace(old, new[, count])`
+option `count` replaces only first `count` occurances of str
+```python
+>>> s = "two be or not two be"
+>>> s.replace("two", "to", 1)
+'to be or not two be'
+```  
+
+##### Further Reading
+[Python Docs. - String Methods](https://docs.python.org/3/library/stdtypes.html#string-methods)  
+
+
+
+### Regular Expressions  
+
+Because regex string patterns make use of special sequences/characters that include the '\', which signifies a character in a string that must be escaped, use Raw Strings.
+Designate a raw string by prefixing the string with 'r', which tells Python nothing in the string should be escaped.
+
+
+Meta Char. | Description
+---|---
+'.'|(Dot) In default mode, match any character except a newline 
+'^'|(Caret) Match the start of the string. In 'multiline' mode, also match immdiately after newline
+'$'|Match the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline
+
+```python
+>>> s = '100 NORTH BROAD ROAD'
+>>> s.replace('ROAD', 'RD.')
+'100 NORTH BRD. RD.'
+
+>>> s[:-4] + s[-4:].replace('ROAD', 'RD.')
+'100 NORTH BROAD RD.'
+
+>>> import re
+>>> re.sub('ROAD$', 'RD.', s)
+'100 NORTH BROAD RD.'
+
+>>> s = '100 BROAD'
+>>> re.sub('ROAD$', 'RD.', s)
+'100 BRD.'
+
+>>> re.sub('\\bROAD$', 'RD.', s)
+'100 BROAD'
+
+>>> re.sub(r'\bROAD$', 'RD.', s)
+'100 BROAD'
+
+>>> s = '100 BROAD ROAD APT. 3'
+>>> re.sub(r'\bROAD$', 'RD.', s)
+'100 BROAD ROAD APT. 3'
+
+>>> re.sub(r'\bROAD\b', 'RD.', s)
+'100 BROAD RD. APT 3'
+```
+Example summary: String methods are not always ideal.  
+Initial regex use will do string replacement job, but needs to know exactly what is needed.  
+Instead of instructions to find `ROAD$`--'ROAD' *only* as it occurs at the end of a string('$'),  
+instruct to find all occurances of whole-word ROAD with word-__b__oundaries at its side('\b').  
+
+
+
