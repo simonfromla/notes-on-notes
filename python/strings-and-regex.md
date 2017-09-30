@@ -220,7 +220,7 @@ option `count` replaces only first `count` occurances of str
 
 ### Regular Expressions  
 
-Because regex string patterns make use of special sequences/characters that include the '\', which signifies a character in a string that must be escaped, use Raw Strings.
+Because regex string patterns make use of special sequences/characters that include the '\\', which signifies a character in a string that must be escaped, use Raw Strings.
 Designate a raw string by prefixing the string with 'r', which tells Python nothing in the string should be escaped.
 
 
@@ -259,6 +259,7 @@ Meta Char. | Description
 >>> re.sub(r'\bROAD\b', 'RD.', s)
 '100 BROAD RD. APT 3'
 ```
+
 Example summary: String methods are not always ideal.  
 Initial regex use will do string replacement job, but needs to know exactly what is needed.  
 Instead of instructions to find `ROAD$`--'ROAD' *only* as it occurs at the end of a string('$'),  
