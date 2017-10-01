@@ -6,9 +6,11 @@ Designate a raw string by prefixing the string with 'r', which tells Python noth
 
 Meta Char. | Description
 ---|---
-'.'|(Dot) In default mode, match any character except a newline 
 '^'|(Caret) Match the start of the string. In 'multiline' mode, also match immdiately after newline
 '$'|Match the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline
+'?'|Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. ab? will match either ‘a’ or ‘ab’
+'\\b'|Matches the empty string, but only at the beginning or end of a word. A word is defined as a sequence of Unicode alphanumeric or underscore characters, so the end of a word is indicated by whitespace or a non-alphanumeric, non-underscore Unicode character.
+'.'|(Dot) In default mode, match any character except a newline 
 
 
 
@@ -80,6 +82,13 @@ Example summary:
 4. All three characters match.  
 5. Three match, but the pattern expects a stop. Returns `None`.  
 6. Since the pattern designates optional characters, an empty string returns a positive match.  
+
+***
+
+Meta Char. | Description
+---|---
+'(...)'|Matches whatever regular expression is inside the parentheses, and indicates the start and end of a group.
+'|'|`A|B`, where A and B can be arbitrary REs, creates a regular expression that will match either A or B. An arbitrary number of REs can be separated by the `'|'` in this way. This can be used inside groups as well. As the target string is scanned, REs separated by `'|'` are tried from left to right.
 
 ##### Checking for Hundreds in roman numerals
 ```python
