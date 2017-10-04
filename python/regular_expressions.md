@@ -10,7 +10,7 @@ Meta Char. | Description
 '$'|Match the end of the string or just before the newline at the end of the string, and in MULTILINE mode also matches before a newline
 '?'|Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. ab? will match either ‘a’ or ‘ab’
 '\\b'|Matches the empty string, but only at the beginning or end of a word. A word is defined as a sequence of Unicode alphanumeric or underscore characters, so the end of a word is indicated by whitespace or a non-alphanumeric, non-underscore Unicode character.
-'.'|(Dot) In default mode, match any character except a newline 
+
 
 
 
