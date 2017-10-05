@@ -105,3 +105,9 @@ print('Entire job took:',time.time() - start)
 
 ```
 
+
+##### Further Reading:
+[Python 3 Docs. - Threading](https://docs.python.org/3/library/threading.html#module-threading)
+[Multithreading Tutorial](https://www.toptal.com/python/beginners-guide-to-concurrency-and-parallelism-in-python)
+[Daemon vs Nondaemon, Subclassing, Timer threads and more](https://pymotw.com/2/threading/)  
+[Using `map` and `pool`, more examples](https://stackoverflow.com/questions/2846653/how-to-use-threading-in-python)
