@@ -8,4 +8,21 @@ INFO	20 -- Confirmation that things are working as expected
 DEBUG	10 -- Detailed information, typically of interest only when diagnosing problems
 
 
+The default logging level is WARNING. This means, when using the logging module to print logs out to the console:
+```
+def add(x, y):
+    return x + y
 
+num_1, num_2 = 10, 15
+result = add(num_1, num_2)
+
+logging.warning('Add: {} + {} = {}'.format(num_1, num2, result))
+
+```
+
+```python
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
+
+```
