@@ -141,7 +141,9 @@ def test_monthly_schedule(self):
 
 ### Further reading
 
-[Py docs.--Unittest module](https://docs.python.org/3/library/unittest.html#module-unittest)
-[List of assert methods for testing](https://docs.python.org/3/library/unittest.html#assert-methods)
-[Using decorators (@classmethod)](https://stackoverflow.com/questions/739654/how-to-make-a-chain-of-function-decorators/1594484#1594484)
+[Py docs.--Unittest module](https://docs.python.org/3/library/unittest.html#module-unittest)  
+[List of assert methods for testing](https://docs.python.org/3/library/unittest.html#assert-methods)  
+[Using decorators (@classmethod)](https://stackoverflow.com/questions/739654/how-to-make-a-chain-of-function-decorators/1594484#1594484)  
 [Test discovery](https://docs.python.org/3/library/unittest.html#test-discovery)  
+
+
