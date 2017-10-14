@@ -6,7 +6,6 @@ Testing conventions:
 
 * Create a separate module beginning with name __"test\_"__  
 * Tests should be isolated--able to run independent not relying on other tests.
-* Import the unittest module as well as the module to be tested  
 * To run the tests, __unittest__ must be run as the main module:  
 `$ python -m unittest test_palindrome.py`
 * To run the test module by itself, add `if name == '__main__': unittest.main()`
@@ -15,10 +14,9 @@ Testing conventions:
 * Funcs named __"test\_function"__ will be automatically called by unittest.main()  
 * Group different check types in separate functions
 * assertTrue, assertFalse, assertRaises, assertEqual, etc. can be used depending on the test
-
+* Import the unittest module as well as the module to be tested  
 ```python
 
-"""
 import example_palindrome
 import unittest
 
@@ -120,6 +118,7 @@ Testing involving certain processes the user has no control over.
 * Called `with patch`  
 
 ```python
+from unittest.mock import patch
 
 def test_monthly_schedule(self):
     with patch('employee.requests.get') as mocked_get:
@@ -141,9 +140,18 @@ def test_monthly_schedule(self):
 
 ### Further reading
 
-[Py docs.--Unittest module](https://docs.python.org/3/library/unittest.html#module-unittest)  
+[Py docs. -- unittest module](https://docs.python.org/3/library/unittest.html#module-unittest)  
 [List of assert methods for testing](https://docs.python.org/3/library/unittest.html#assert-methods)  
 [Using decorators (@classmethod)](https://stackoverflow.com/questions/739654/how-to-make-a-chain-of-function-decorators/1594484#1594484)  
 [Test discovery](https://docs.python.org/3/library/unittest.html#test-discovery)  
+
+__mocking__
+[Py docs. -- unittest.mock](https://docs.python.org/3/library/unittest.mock.html)  
+[Mocking introductory tut.](https://www.toptal.com/python/an-introduction-to-mocking-in-python)  
+
+__TDD__
+[Python Koans interactive tut.](https://github.com/gregmalcolm/python_koans)  
+[Obey the Testing Goat](https://www.obeythetestinggoat.com/pages/book.html)  
+
 
 
