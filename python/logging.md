@@ -20,9 +20,12 @@ logging.warning('Add: {} + {} = {}'.format(num_1, num2, result))
 
 ```
 
+Change basic configurations
 ```python
 import logging
 
 logging.basicConfig(level=logging.DEBUG)
+...
+logging.debug('Add: {} + {} = {}'.format(num_1, num2, result))
 
 ```
