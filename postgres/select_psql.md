@@ -1,4 +1,4 @@
-# psql
+# psql-select
 
 ### SELECT  
 
@@ -33,3 +33,22 @@ Retrieving unnecessary data from a table increases traffic from a DB server to t
 It is therefore good practice to specify the names of only the columns you need, when querying the DB. 
 
 
+##### Using the ORDER BY clause  
+*Sort the result set returned from the SELECT statement using ORDER BY*  
+
+```sql
+SELECT  
+ username,
+ first_name,
+ last_name
+FROM
+ User_Profile;
+ORDER_BY
+ last_name DESC,
+ first_name;
+```  
+
+* Ommision of either DESC or ASC will result in a ordering by ASC by default.  
+* Although PSQL allows you to sort rows based on columns not specfied in the SELECT statement, SQL standard does not. It is good practice to follow SQL standard to make the code more portable.  
+  
+ 
