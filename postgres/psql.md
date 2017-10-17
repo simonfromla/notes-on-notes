@@ -14,3 +14,22 @@ The clauses that appear with the SELECT statement are:
 * __HAVING__ to apply conditions to the groups  
 * Join tables together using __INNER JOIN__, __LEFT JOIN__, __FULL OUTER JOIN__, and __CROSS JOIN__  
 
+##### Using the SELECT statement  
+
+First, specify the columns comma-separated, then select the table from which to query.  
+```sql
+SELECT  
+ username,
+ email,
+ profile_picture
+FROM
+ User_Profile;
+```
+*note:* 
+- (\*) will query all columns (usage not advised).  
+- Semi-colon specifies the end of the SELECT statement.  
+- SQL is case-insensitive.  
+Retrieving unnecessary data from a table increases traffic from a DB server to the application.  
+It is therefore good practice to specify the names of only the columns you need, when querying the DB. 
+
+
